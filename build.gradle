@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+group = 'be.erigo.tools'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.sun.mail:jakarta.mail:2.0.1'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    runtimeOnly 'org.slf4j:jul-to-slf4j:2.0.9'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': 'SimpleLocalMailTransport',
+                'Implementation-Version': version
+        )
+    }
+}

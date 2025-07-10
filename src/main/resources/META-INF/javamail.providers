@@ -1,0 +1,1 @@
+protocol=smtp; type=transport; class=be.erigo.tools.SimpleLocalMailTransport; vendor=erigo.be; version=1.0
